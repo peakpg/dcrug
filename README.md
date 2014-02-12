@@ -1,6 +1,6 @@
 # Building a website with BrowserCMS
 
-This is a sample BrowserCMS project for a presentation to DCRUG on 2/13/14.
+This is a sample BrowserCMS project for a presentation to DCRUG on 3/13/14.
 
 ## References
 

@@ -1,4 +1,5 @@
 Dcrug::Application.routes.draw do
+  namespace :dcrug do content_blocks :sliders end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

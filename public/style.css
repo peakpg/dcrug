@@ -1632,3 +1632,9 @@ and (min-width : 901px) {
 	margin:20px 8% 5px 8%;	
 }
 }
+
+.recentcomments a {
+      display: inline !important;
+      padding: 0 !important;
+      margin: 0 !important;
+  }
