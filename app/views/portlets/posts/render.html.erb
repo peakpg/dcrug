@@ -1,5 +1,5 @@
-<% @posts.each do |p| %>
-    <%= render file: 'dcrug/posts/render', locals: {content: p} %>
+<% @posts.each do |post| %>
+    <%= render partial: 'dcrug/posts/post', object: post %>
 <% end %>
 
 
