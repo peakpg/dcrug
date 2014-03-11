@@ -1,0 +1,17 @@
+<header id="masthead" class="site-header" role="banner">
+  <div class="responsive-container">
+    <div class="site-header-half-width-logo">
+      <div class="site-branding">
+        <h1 class="site-title"><%= link_to "Hello DCRUG", "/" %></h1>
+
+        <h2 class="site-description">A BrowserCMS Demo</h2>
+      </div>
+    </div>
+    <div class="site-header-half-width-nav">
+      <nav id="site-navigation" class="main-navigation" role="navigation">
+        <div class="screen-reader-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+        <%= render_menu from_top: 0, depth: 1 %>
+      </nav>
+    </div>
+  </div>
+</header>

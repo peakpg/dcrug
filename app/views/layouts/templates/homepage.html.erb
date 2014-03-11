@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title> <%= page_title %> | BrowserCMS Demo</title>
-  <meta name='robots' content='noindex,follow'/>
-  <link rel='stylesheet' id='alexandria-style-css' href='/style.css' type='text/css' media='all'/>
-  <%= yield :html_head %>
-  <%#= javascript_include_tag '/js/tinynav.min' %>
+  <%= render 'partials/head' %>
 
-</head>
 
 <body class="home blog custom-background">
 <div id="wrapper-one">
@@ -21,27 +13,8 @@
   </div>
 </div>
 
-<header id="masthead" class="site-header" role="banner">
-  <div class="responsive-container">
-    <div class="site-header-half-width-logo">
-      <div class="site-branding">
-        <h1 class="site-title"><%= link_to "Hello DCRUG", "/" %></h1>
+<%= render 'partials/header' %>
 
-        <h2 class="site-description">A BrowserCMS Demo</h2>
-      </div>
-    </div>
-    <div class="site-header-half-width-nav">
-      <nav id="site-navigation" class="main-navigation" role="navigation">
-        <div class="screen-reader-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
-        <ul id="main-nav" class="menu">
-          <li class="menu-item current-menu-item current_page_item menu-item-home">
-            <%= link_to "Home", "/" %>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
 <div id="feature" class="site-slider">
   <div class="responsive-container">
     <%= container :slider %>
@@ -59,16 +32,7 @@
 <div class="biz0ne">
 
   <div class="biz0ne-welcome">
-
-    <h1>
-      Welcome Headline Comes Here
-    </h1>
-
-    <p>
-      You can change this text in welcome text box of welcome section block in Biz one tab of theme options page. You
-      can change this text in welcome text box of welcome section block in Biz two tab of theme options page.
-    </p>
-
+    <%= container :welcome %>
   </div>
   <!-- .biz0ne-welcome -->
 
