@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140212152540) do
+ActiveRecord::Schema.define(version: 20140311182819) do
 
   create_table "cms_attachment_versions", force: true do |t|
     t.string   "data_file_name"
@@ -554,6 +554,37 @@ ActiveRecord::Schema.define(version: 20140212152540) do
   add_index "cms_users", ["expires_at"], name: "index_cms_users_on_expires_at"
   add_index "cms_users", ["login"], name: "index_cms_users_on_login", unique: true
   add_index "cms_users", ["reset_password_token"], name: "index_cms_users_on_reset_password_token", unique: true
+
+  create_table "post_versions", force: true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.date     "release_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "original_record_id"
+    t.integer  "version"
+    t.boolean  "published",          default: false
+    t.boolean  "deleted",            default: false
+    t.boolean  "archived",           default: false
+    t.string   "version_comment"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.date     "release_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "version"
+    t.integer  "lock_version",  default: 0
+    t.boolean  "published",     default: false
+    t.boolean  "deleted",       default: false
+    t.boolean  "archived",      default: false
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+  end
 
   create_table "slider_versions", force: true do |t|
     t.text     "description"

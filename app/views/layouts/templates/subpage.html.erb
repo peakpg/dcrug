@@ -17,104 +17,113 @@
 <!-- #banner -->
 <div id="main" class="site-main">
 
-<div class="responsive-container">
+  <div class="responsive-container">
 
-<div class="content-container">
+    <div class="content-container">
 
-<div class="biz0ne">
+      <div class="biz0ne">
 
-<div id="primary" class="content-area">
-<div id="content" class="site-content" role="main">
+        <div id="primary" class="content-area">
+          <div id="content" class="site-content" role="main">
 
-  <h1 class="entry-title"><%= page_header %></h1>
-<%= container :main %>
+            <% # Allows subpage to be used to also display addressable content types that handle their own header.
+               unless @content_block %>
+            <h1 class="entry-title"><%= page_header %></h1>
+            <% end %>
+            <%= container :main %>
 
-</div>
-<!-- #content -->
-</div>
-<!-- #primary -->
+          </div>
+          <!-- #content -->
+        </div>
+        <!-- #primary -->
 
-<div id="secondary" class="widget-area" role="complementary">
-  <aside id="search-3" class="widget widget_search">
-    <form role="search" method="get" class="search-form" action="http://wp-themes.com/">
-      <label>
-        <span class="screen-reader-text">Search for:</span>
-        <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
-      </label>
-      <input type="submit" class="search-submit" value="Search">
-    </form>
-  </aside>
-  <aside id="recent-posts-3" class="widget widget_recent_entries"><h1 class="widget-title">Recent Posts</h1>
-    <ul>
-      <li>
-        <a href="http://wp-themes.com/?p=19">Worth A Thousand Words</a>
-      </li>
-      <li>
-        <a href="http://wp-themes.com/?p=36">Elements</a>
-      </li>
-      <li>
-        <a href="http://wp-themes.com/?p=14">More Tags</a>
-      </li>
-      <li>
-        <a href="http://wp-themes.com/?p=8">HTML</a>
-      </li>
-      <li>
-        <a href="http://wp-themes.com/?p=6">Links</a>
-      </li>
-    </ul>
-  </aside>
-  <aside id="recent-comments-3" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1>
-    <ul id="recentcomments">
-      <li class="recentcomments"><a href='http://josephscott.org/' rel='external nofollow' class='url'>Joseph Scott</a>
-        on <a href="http://wp-themes.com/?p=1&#038;cpage=1#comment-509">Hello world!</a></li>
-      <li class="recentcomments">
-        <a href='http://joseph.randomnetworks.com/' rel='external nofollow' class='url'>Joseph Scott</a> on
-        <a href="http://wp-themes.com/?p=8&#038;cpage=1#comment-2">HTML</a></li>
-      <li class="recentcomments"><a href='http://wordpress.org/' rel='external nofollow' class='url'>Mr WordPress</a> on
-        <a href="http://wp-themes.com/?p=1&#038;cpage=1#comment-1">Hello world!</a></li>
-    </ul>
-  </aside>
-  <aside id="archives-3" class="widget widget_archive"><h1 class="widget-title">Archives</h1>
-    <ul>
-      <li><a href='http://wp-themes.com/?m=200810'>October 2008</a></li>
-      <li><a href='http://wp-themes.com/?m=200809'>September 2008</a></li>
-      <li><a href='http://wp-themes.com/?m=200806'>June 2008</a></li>
-    </ul>
-  </aside>
-  <aside id="categories-3" class="widget widget_categories"><h1 class="widget-title">Categories</h1>
-    <ul>
-      <li class="cat-item cat-item-6">
-        <a href="http://wp-themes.com/?cat=6" title="View all posts filed under First Child Category">First Child
-          Category</a>
-      </li>
-      <li class="cat-item cat-item-8">
-        <a href="http://wp-themes.com/?cat=8" title="View all posts filed under One Grandchild Category">One Grandchild
-          Category</a>
-      </li>
-      <li class="cat-item cat-item-5">
-        <a href="http://wp-themes.com/?cat=5" title="View all posts filed under Parent">Parent</a>
-      </li>
-      <li class="cat-item cat-item-7">
-        <a href="http://wp-themes.com/?cat=7" title="View all posts filed under Second Child Category">Second Child
-          Category</a>
-      </li>
-      <li class="cat-item cat-item-1">
-        <a href="http://wp-themes.com/?cat=1" title="View all posts filed under Uncategorized">Uncategorized</a>
-      </li>
-    </ul>
-  </aside>
-</div>
-<!-- #secondary -->
+        <div id="secondary" class="widget-area" role="complementary">
+          <aside id="search-3" class="widget widget_search">
+            <form role="search" method="get" class="search-form" action="http://wp-themes.com/">
+              <label>
+                <span class="screen-reader-text">Search for:</span>
+                <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+              </label>
+              <input type="submit" class="search-submit" value="Search">
+            </form>
+          </aside>
+          <aside id="recent-posts-3" class="widget widget_recent_entries"><h1 class="widget-title">Recent Posts</h1>
+            <ul>
+              <li>
+                <a href="http://wp-themes.com/?p=19">Worth A Thousand Words</a>
+              </li>
+              <li>
+                <a href="http://wp-themes.com/?p=36">Elements</a>
+              </li>
+              <li>
+                <a href="http://wp-themes.com/?p=14">More Tags</a>
+              </li>
+              <li>
+                <a href="http://wp-themes.com/?p=8">HTML</a>
+              </li>
+              <li>
+                <a href="http://wp-themes.com/?p=6">Links</a>
+              </li>
+            </ul>
+          </aside>
+          <aside id="recent-comments-3" class="widget widget_recent_comments">
+            <h1 class="widget-title">Recent Comments</h1>
+            <ul id="recentcomments">
+              <li class="recentcomments">
+                <a href='http://josephscott.org/' rel='external nofollow' class='url'>Joseph Scott</a>
+                on <a href="http://wp-themes.com/?p=1&#038;cpage=1#comment-509">Hello world!</a></li>
+              <li class="recentcomments">
+                <a href='http://joseph.randomnetworks.com/' rel='external nofollow' class='url'>Joseph Scott</a> on
+                <a href="http://wp-themes.com/?p=8&#038;cpage=1#comment-2">HTML</a></li>
+              <li class="recentcomments">
+                <a href='http://wordpress.org/' rel='external nofollow' class='url'>Mr WordPress</a> on
+                <a href="http://wp-themes.com/?p=1&#038;cpage=1#comment-1">Hello world!</a></li>
+            </ul>
+          </aside>
+          <aside id="archives-3" class="widget widget_archive"><h1 class="widget-title">Archives</h1>
+            <ul>
+              <li><a href='http://wp-themes.com/?m=200810'>October 2008</a></li>
+              <li><a href='http://wp-themes.com/?m=200809'>September 2008</a></li>
+              <li><a href='http://wp-themes.com/?m=200806'>June 2008</a></li>
+            </ul>
+          </aside>
+          <aside id="categories-3" class="widget widget_categories"><h1 class="widget-title">Categories</h1>
+            <ul>
+              <li class="cat-item cat-item-6">
+                <a href="http://wp-themes.com/?cat=6" title="View all posts filed under First Child Category">First
+                  Child
+                  Category</a>
+              </li>
+              <li class="cat-item cat-item-8">
+                <a href="http://wp-themes.com/?cat=8" title="View all posts filed under One Grandchild Category">One
+                  Grandchild
+                  Category</a>
+              </li>
+              <li class="cat-item cat-item-5">
+                <a href="http://wp-themes.com/?cat=5" title="View all posts filed under Parent">Parent</a>
+              </li>
+              <li class="cat-item cat-item-7">
+                <a href="http://wp-themes.com/?cat=7" title="View all posts filed under Second Child Category">Second
+                  Child
+                  Category</a>
+              </li>
+              <li class="cat-item cat-item-1">
+                <a href="http://wp-themes.com/?cat=1" title="View all posts filed under Uncategorized">Uncategorized</a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <!-- #secondary -->
 
-</div>
-<!-- .biz0ne -->
+      </div>
+      <!-- .biz0ne -->
 
 
-</div>
-<!-- .content-container -->
+    </div>
+    <!-- .content-container -->
 
-</div>
-<!-- .Responsive-Container -->
+  </div>
+  <!-- .Responsive-Container -->
 
 </div>
 <!-- #main -->
