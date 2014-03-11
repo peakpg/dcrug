@@ -1,0 +1,9 @@
+<aside id="recent-posts-3" class="widget widget_recent_entries"><h1 class="widget-title">Recent Posts</h1>
+  <ul>
+    <% @posts.each do |p| %>
+    <li>
+      <%= link_to p.name, p.path %>
+    </li>
+    <% end %>
+  </ul>
+</aside>
