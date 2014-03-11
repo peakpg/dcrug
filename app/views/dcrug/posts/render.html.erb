@@ -1,25 +1,24 @@
+<%  # Hack to allow me to use same view for both List and Detail pages. There is a better way to do this.
+    unless @content_block
+        @content_block = content
+    end
+%>
 <article id="post-19" class="post-19 post type-post status-publish format-standard hentry category-uncategorized tag-boat tag-lake">
   <header class="entry-header">
 
-    <h1 class="entry-title"><%= link_to(show(:name), main_app.post_slug_path(@content_block)) %></h1>
+    <h1 class="entry-title"><%= link_to(show(:name), @content_block.path) %></h1>
 
     <div class="entry-meta">
       <span class="posted-on">Posted on <time class="entry-date published" datetime="<%= @content_block.release_date %>"><%= show :release_date %></time>
       </span><span class="byline"> by <span class="author vcard"><%= @content_block.created_by.full_name %></span></span></div>
-    <!-- .entry-meta -->
-
   </header>
-  <!-- .entry-header -->
 
   <div class="entry-content">
     <%= show :body %>
   </div>
-  <!-- .entry-content -->
 
   <footer class="entry-meta-bottom">
 
   </footer>
-  <!-- .entry-meta -->
-
-
 </article>
+<%= @content_block = nil %>

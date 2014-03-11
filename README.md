@@ -4,10 +4,11 @@ This is a sample BrowserCMS project for a presentation to DCRUG on 3/13/14.
 
 ## TODO
 
-* Finish building out homepage template
-* Create subpage template that removed the giant header Alexandria puts on subpages
-* Create 'Post' content type (make addressable)
-* Add Portlet to homepage to list posts
+* Add sidebar portlet (list posts)
+
+## Bugs
+
+* Page title appears twice when viewing posts in isolation.
 
 ## References
 
