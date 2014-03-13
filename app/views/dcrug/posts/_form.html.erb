@@ -1,4 +1,5 @@
 <%= f.input :name, as: :name %>
 <%= f.input :slug, as: :path %>
 <%= f.input :body, as: :text_editor %>
-<%= f.input :release_date, as: :date_picker, input_html: { :value => Date.today.strftime("%Y/%m/%d") }  %>
+<%= f.input :release_date, as: :date_picker, 
+            input_html: { :value => Date.today.strftime("%Y/%m/%d") }  %>
